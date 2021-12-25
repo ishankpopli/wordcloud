@@ -4,7 +4,9 @@ from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
 import sys, os
 os.chdir(sys.path[0])
-text=open('ok.txt', mode='r', encoding='utf-8').read()
+
+a= input()
+
 stopwords = STOPWORDS
 
 wc= WordCloud(
@@ -13,6 +15,6 @@ wc= WordCloud(
     height = 900,
     width = 500
 )
-wc.generate(text)
+wc.generate(a)
 wc.to_file('wordcloud_output.png')
 
